@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import { addScaleCorrector, motion } from "framer-motion";
 
 const ProjectsItemContainer = styled.a`
   border-radius: 20px;
@@ -123,8 +124,15 @@ const Title = styled.div`
 function ProjectsItem(props) {
 
   let { img, title, uses, link, description, lenguages } = props
+
   return (
-    <ProjectsItemContainer href={link} target="_blank" style={{backgroundImage: `url("${img}")`}}>
+    <ProjectsItemContainer      
+      as={motion.a}
+      initial={{ opacity: 0 }}         
+      whileInView={{ opacity: 1, y: 0 }}
+      transition= {{delay: 0.3}}
+      whileHover={{scale: 1.05}}
+     href={link} target="_blank" style={{backgroundImage: `url("${img}")`}}>
       <ProjectDescription>
         {description}
         <DescriptionUses>{lenguages}</DescriptionUses>

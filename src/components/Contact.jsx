@@ -2,6 +2,7 @@ import React, { useState }  from 'react'
 import { IoLogoWhatsapp } from 'react-icons/io';
 import { IoMdMail } from 'react-icons/io';
 import styled from "styled-components"
+import { motion } from "framer-motion";
 
 const ContactMainContainer = styled.div`
   color:#242021;
@@ -70,12 +71,9 @@ const ContactBox = styled.div`
   background-color: #242021;
   border-radius: 25px;
 
-  &:hover{
-    color: #FC8E3F;
-  }
-
   &:active{
-    transform: scale(1.1)
+    color: #c7c7c7;
+    background-color: #322d2e;
   }
 
   @media (min-width: 768px) {
@@ -97,12 +95,9 @@ const ContactBoxAnchor = styled.a`
   background-color: #242021;
   border-radius: 25px;
 
-  &:hover{
-    color: #FC8E3F;
-  }
-
   &:active{
-    transform: scale(1.1)
+    color: #c7c7c7;
+    background-color: #322d2e;
   }
 
   @media (min-width: 768px) {
@@ -157,6 +152,7 @@ const PopupsContainer = styled.div`
 `
 
 
+
 function Contact() {
 
   const [isHovering, setIsHovering] = useState(false);
@@ -184,16 +180,23 @@ function Contact() {
       <PopupsContainer>
         {isHovering && <HoverContainer>Click to copy e-mail to clipboard</HoverContainer>}
       </PopupsContainer>
-      <ContactContainer data-aos="fade-right">
+      <ContactContainer 
+        as={motion.div}
+        initial={{ opacity: 0 }}         
+        whileInView={{ opacity: 1, y: 0 }}
+        transition= {{delay: 0.3}}>
         <ContactBoxContainer>
-          <ContactBox onClick={handleClick}>
+          <ContactBox onClick={handleClick}
+            as={motion.div}
+            whileHover={{scale: 1.05}}>
             <IoMdMail/>
           </ContactBox>
-          <ContactBoxAnchor href={"https://wa.me/5491122251843"} target="_blank"><IoLogoWhatsapp/></ContactBoxAnchor>
+          <ContactBoxAnchor
+            as={motion.a}
+            whileHover={{scale: 1.05}}
+            href={"https://wa.me/5491122251843"} target="_blank"><IoLogoWhatsapp/></ContactBoxAnchor>
         </ContactBoxContainer>
       </ContactContainer>
-
-
     </ContactMainContainer>
   )
 }

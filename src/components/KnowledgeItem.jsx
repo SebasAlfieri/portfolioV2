@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from "styled-components"
-
+import React from "react";
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled.div`
   padding: 10px 20px;
@@ -15,16 +15,27 @@ const Container = styled.div`
     font-size: 2rem;
     border-radius: 15px;
   }
-`
+`;
 
 function KnowledgeItem(props) {
 
+  let { title, background, color } = props;
 
-  let { title, background, color } = props
+  const item = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: -1000 },
+  };
+
 
   return (
-    <Container style={{backgroundColor:`${background}`, color:`${color}`}}>{title}</Container>
-  )
+    <Container
+      as={motion.div}
+      variants={item}
+      style={{ backgroundColor: `${background}`, color: `${color}` }}
+    >
+      {title}
+    </Container>
+  );
 }
 
-export default KnowledgeItem
+export default KnowledgeItem;

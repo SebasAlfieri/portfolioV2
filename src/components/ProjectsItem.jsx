@@ -114,7 +114,7 @@ const Title = styled.div`
   font-weight: 600;
 
   @media (min-width: 1400px) {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 `
 

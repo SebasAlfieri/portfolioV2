@@ -1,6 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import KnowledgeItem from './KnowledgeItem'
+import React from "react";
+import styled from "styled-components";
+import KnowledgeItem from "./KnowledgeItem";
+import { motion } from "framer-motion";
 
 const HeaderMainContainer = styled.div`
   display: flex;
@@ -14,7 +15,7 @@ const HeaderMainContainer = styled.div`
   @media (min-width: 1400px) {
     padding: 100px 100px;
   }
-`
+`;
 
 const HeaderItemsContainer = styled.div`
   height: 500px;
@@ -26,11 +27,9 @@ const HeaderItemsContainer = styled.div`
   @media (min-width: 1400px) {
     height: 600px;
   }
-`
+`;
 
-const HeaderItemsText = styled.div`
-
-`
+const HeaderItemsText = styled.div``;
 
 const HeaderTitleTop = styled.h1`
   font-size: 3rem;
@@ -38,15 +37,15 @@ const HeaderTitleTop = styled.h1`
   width: fit-content;
 
   @media (min-width: 768px) {
-  font-size: 4rem;
-  font-weight: 100;
-  width: fit-content;
+    font-size: 4rem;
+    font-weight: 100;
+    width: fit-content;
   }
 
   @media (min-width: 1400px) {
     font-size: 7rem;
   }
-`
+`;
 
 const HeaderTitleBot = styled.h1`
   font-size: 3rem;
@@ -54,19 +53,19 @@ const HeaderTitleBot = styled.h1`
   width: fit-content;
 
   @media (min-width: 768px) {
-  font-size: 4rem;
-  font-weight: 100;
-  width: fit-content;
+    font-size: 4rem;
+    font-weight: 100;
+    width: fit-content;
   }
 
   @media (min-width: 1400px) {
     font-size: 7rem;
   }
-`
+`;
 
 const TitleBotSpan = styled.span`
   font-weight: 600;
-`
+`;
 
 const HeaderSubtitle = styled.h3`
   font-size: 0.9rem;
@@ -74,8 +73,8 @@ const HeaderSubtitle = styled.h3`
   margin-bottom: 80px;
 
   @media (min-width: 768px) {
-  margin-left: 15px;
-  margin-bottom: 40px;
+    margin-left: 15px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: 1400px) {
@@ -89,17 +88,17 @@ const HeaderSubtitle = styled.h3`
     margin-bottom: 80px;
     width: 800px;
   }
-`
+`;
 
 const HeaderContact = styled.a`
   padding: 15px;
   text-decoration: none;
   border-radius: 25px;
-  background-color: #FE5A01;
+  background-color: #fe5a01;
   color: white;
-  
-  &:hover{
-    background-color: #FC8E3F;
+
+  &:hover {
+    background-color: #fc8e3f;
   }
 
   @media (min-width: 768px) {
@@ -111,7 +110,7 @@ const HeaderContact = styled.a`
     padding: 20px;
     border-radius: 35px;
   }
-`
+`;
 
 const HeaderKnowledges = styled.div`
   margin-top: 100px;
@@ -126,7 +125,7 @@ const HeaderKnowledges = styled.div`
   @media (min-width: 1400px) {
     width: 600px;
   }
-`
+`;
 
 const HeaderImgContainer = styled.img`
   display: none;
@@ -159,32 +158,124 @@ const HeaderImgContainer = styled.img`
     width: 700px;
     height: 700px;
   }
-`
+`;
 
 function Header() {
 
+  const subtitle = {
+    visible: {
+      x: [-1000, 0],
+      transition: {
+        delay: 0.7,
+        when: "beforeChildren",
+        staggerChildren: 0.4,
+      },
+    },
+    hidden: {
+      transition: {
+        when: "afterChildren",
+      },
+    },
+  };
+
+  const list = {
+    visible: {
+      x: [-1000, 0],
+      transition: {
+        delay: 0.2,
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+    hidden: {
+      transition: {
+        when: "afterChildren",
+      },
+    },
+  };
+
+  const item = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -100 },
+  };
 
   return (
-    <HeaderMainContainer id='header'>
+    <HeaderMainContainer id="header">
       <HeaderItemsContainer>
         <HeaderItemsText>
-          <HeaderTitleTop>My name</HeaderTitleTop>
-          <HeaderTitleBot>is <TitleBotSpan>Sebastian</TitleBotSpan></HeaderTitleBot>
-          <HeaderSubtitle>Im a junior programer highly motivated to create and grow.</HeaderSubtitle>
-          <HeaderContact href='#contact'>Contact me</HeaderContact>
+          <HeaderTitleTop
+            as={motion.h1}
+            initial={{ opacity: 0 }}
+            animate={{ y: [-1000, 0] }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            My name
+          </HeaderTitleTop>
+          <HeaderTitleBot
+            as={motion.h1}
+            initial="hidden"
+            animate="visible"
+            variants={subtitle}
+          >
+            is
+            <TitleBotSpan as={motion.span} variants={item}>
+              {" "}
+            </TitleBotSpan>
+            <TitleBotSpan as={motion.span} variants={item}>
+              Sebastian
+            </TitleBotSpan>
+          </HeaderTitleBot>
+          <HeaderSubtitle
+            as={motion.h3}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.8 }}
+          >
+            Im a junior programer highly motivated to create and grow.
+          </HeaderSubtitle>
+          <HeaderContact
+            href="#contact"
+            as={motion.a}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 3.8 }}
+          >
+            Contact me
+          </HeaderContact>
         </HeaderItemsText>
-        <HeaderKnowledges>
-          <KnowledgeItem title="HTML" background="#FC8E3F" color="black"/>
-          <KnowledgeItem title="CSS" background="#FE5A01" color="white"/>
-          <KnowledgeItem title="JavaScript" background="#222021" color="white"/>
-          <KnowledgeItem title="React JS" background="#E4E4E4" color="black"/>
+        <HeaderKnowledges
+          as={motion.div}
+          initial="hidden"
+          animate="visible"  
+          variants={list}
+          transition={{delay: 2}}
+        >
+          <KnowledgeItem
+            title="HTML"
+            background="#FC8E3F" 
+            color="black"
+          />
+          <KnowledgeItem
+            title="CSS"
+            background="#FE5A01"
+            color="white"
+          />
+          <KnowledgeItem
+            title="JavaScript"
+            background="#222021"
+            color="white"
+          />
+          <KnowledgeItem title="React JS" background="#E4E4E4" color="black" />
         </HeaderKnowledges>
       </HeaderItemsContainer>
-      <HeaderImgContainer src='./images/iconHeader.png'>
-
-      </HeaderImgContainer>
+      <HeaderImgContainer
+        src="./images/iconHeader.png"
+        as={motion.img}
+        animate={{ y: [-5000, 0] }}
+        transition={{ delay: 1, duration: 2 }}
+      ></HeaderImgContainer>
     </HeaderMainContainer>
-  )
+  );
 }
 
-export default Header
+export default Header;

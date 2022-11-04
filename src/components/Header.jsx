@@ -18,7 +18,7 @@ const HeaderMainContainer = styled.div`
 `;
 
 const HeaderItemsContainer = styled.div`
-  height: 500px;
+  height: 750px;
 
   @media (min-width: 768px) {
     height: 425px;
@@ -70,9 +70,11 @@ const TitleBotSpan = styled.span`
 const HeaderSubtitle = styled.h3`
   font-size: 0.9rem;
   margin-left: 0;
-  margin-bottom: 80px;
+  margin-top: 25px;
+  margin-bottom: 50px;
 
   @media (min-width: 768px) {
+    margin-top: 0;
     margin-left: 15px;
     margin-bottom: 40px;
   }
@@ -113,7 +115,7 @@ const HeaderContact = styled.a`
 `;
 
 const HeaderKnowledges = styled.div`
-  margin-top: 100px;
+  margin-top: 200px;
   display: flex;
   flex-wrap: wrap;
   width: 300px;

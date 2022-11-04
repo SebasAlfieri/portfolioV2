@@ -70,6 +70,7 @@ const Title = styled.div`
   font-weight: 600;
 `
 
+
 function ProjectsItem(props) {
 
   let { img, title, uses, link, description, lenguages } = props

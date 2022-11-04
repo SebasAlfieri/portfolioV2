@@ -8,12 +8,23 @@ const ContactMainContainer = styled.div`
   font-size: 1.5rem;
   margin: auto;
   height: fit-content;
+  margin-top: -70px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
 `
 
 const ContactTitle = styled.h2`
-  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
   font-size: 2rem;
   font-weight: 600;
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    margin-left: 50px;
+  }
 `
 
 const ContactContainer = styled.div`
@@ -21,16 +32,16 @@ const ContactContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   color:#ffffff;
-  width: 600px;
-  height: 200px;
+  width: 200px;
+  height: 100px;
   margin: auto;
-  margin-top: 75px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 
-    /* @media (min-width: 768px) {
-      width: 60%;
-      height: 60%;
-  } */
+  @media (min-width: 768px) {
+    width: 400px;
+    height: 200px;
+  }
 `
 
 const ContactBoxContainer = styled.div`
@@ -39,16 +50,22 @@ const ContactBoxContainer = styled.div`
   display: flex;
   align-self: center;
   justify-content: space-between;
-  width: 700px;
+  width: 250px;
+  margin-top: -40px;
+
+  @media (min-width: 768px) {
+    width: 700px;
+    margin-top: 10px;
+  }
 `
 
 const ContactBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 200px;
-  font-size: 10rem;
+  width: 100px;
+  height: 100px;
+  font-size: 4rem;
   transition: 0.1s;
   background-color: #242021;
   border-radius: 25px;
@@ -56,15 +73,25 @@ const ContactBox = styled.div`
   &:hover{
     color: #FC8E3F;
   }
+
+  &:active{
+    transform: scale(1.1)
+  }
+
+  @media (min-width: 768px) {
+    width: 250px;
+    height: 150px;
+    font-size: 7rem;
+  }
 `
 
 const ContactBoxAnchor = styled.a`
   display: flex;  
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 200px;
-  font-size: 10rem;
+  width: 100px;
+  height: 100px;
+  font-size: 4rem;
   transition: 0.1s;
   color:#ffffff;
   background-color: #242021;
@@ -75,8 +102,13 @@ const ContactBoxAnchor = styled.a`
   }
 
   &:active{
-    font-size: 13rem;
-    color: #ffffff;
+    transform: scale(1.1)
+  }
+
+  @media (min-width: 768px) {
+    width: 250px;
+    height: 150px;
+    font-size: 7rem;
   }
 `
 
@@ -88,22 +120,36 @@ const HoverContainer = styled.div`
   color: white;
   padding: 5px;
   border-radius: 25px;
-  width: 400px;
+  width: 300px;
   font-size: 1rem;
   margin: auto;
+
+  @media (min-width: 768px) {
+    width: 400px;
+  }
 `
 
 const ClickContainer = styled.div`
   position: relative;
   text-align: center;
-  top: 50px;
+  top: 190px;
   background-color: #242021;
   color: white;
   padding: 5px;
   border-radius: 25px;
-  width: 400px;
-  font-size: 1rem;
+  width: 300px;
+  font-size: 0.8rem;
   margin: auto;
+  animation-duration: 3s;
+  animation-name: fadeOut;
+  animation-iteration-count: infinite;
+
+
+  @media (min-width: 768px) {
+    width: 400px;
+    top: 50px;
+    font-size: 1rem;
+  }
 `
 
 const PopupsContainer = styled.div`

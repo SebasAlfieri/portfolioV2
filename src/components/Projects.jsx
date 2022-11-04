@@ -4,23 +4,40 @@ import ProjectsColumn from "./ProjectsColumn"
 
 
 const MainContainer = styled.div`
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin-top: 100px;
+  margin-bottom: 75px;
+
+  @media (min-width: 768px) {
+    margin-top: 50px;
+    margin-bottom: 75px;
+  }
 `
 
 const MainTitle = styled.h2`
-  margin-left: 50px;
+  margin-left: 0;
+  text-align: center;
   font-size: 2rem;
   font-weight: 600;
   color:#242021;
+
+  @media (min-width: 768px) {
+    margin-left: 50px;
+    font-size: 2rem;
+  }
 `
 
 const ProjectsContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 75px;
   width: 90%;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    margin-top: 100px;
+  }
 `
 
 function Projects() {

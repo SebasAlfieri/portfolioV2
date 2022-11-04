@@ -20,3 +20,39 @@ html{
   opacity: 1;
   transition: 1s;
 }
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #696465;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #242021;
+}
+
+@media (max-width: 767px) {
+
+  #column{
+    margin-top: 0 !important;
+    margin-bottom: 100px;
+  }
+}
+
+@keyframes fadeOut {
+	0% {
+		transform: scale(1.0);
+	}
+  50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1.0);
+	}
+}

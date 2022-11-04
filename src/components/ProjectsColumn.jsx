@@ -8,6 +8,22 @@ const Column = styled.div`
   justify-content: space-between;
   flex-direction: column;
   height: 500px;
+
+  @media (min-width: 768px) {
+    height: 400px;
+  }
+
+  @media (min-width: 992px) {
+    height: 500px;
+  }
+
+  @media (min-width: 1400px) {
+    height: 650px;
+  }
+
+  @media (min-width: 1600px) {
+    height: 750px;
+  }
 `
 
 function ProjectsColumn(props) {

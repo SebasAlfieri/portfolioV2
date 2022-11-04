@@ -186,9 +186,7 @@ function Contact() {
       </PopupsContainer>
       <ContactContainer data-aos="fade-right">
         <ContactBoxContainer>
-          <ContactBox
-          onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} 
-          onClick={handleClick}>
+          <ContactBox onClick={handleClick}>
             <IoMdMail/>
           </ContactBox>
           <ContactBoxAnchor href={"https://wa.me/5491122251843"} target="_blank"><IoLogoWhatsapp/></ContactBoxAnchor>

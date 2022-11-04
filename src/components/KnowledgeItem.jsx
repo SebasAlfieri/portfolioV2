@@ -8,6 +8,13 @@ const Container = styled.div`
   border-radius: 5px;
   width: fit-content;
   font-weight: 500;
+
+  @media (min-width: 1400px) {
+    padding: 15px 35px;
+    margin: 5px 5px;
+    font-size: 2rem;
+    border-radius: 15px;
+  }
 `
 
 function KnowledgeItem(props) {

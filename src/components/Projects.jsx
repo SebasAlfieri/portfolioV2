@@ -23,7 +23,22 @@ const MainTitle = styled.h2`
   @media (min-width: 768px) {
     margin-left: 50px;
     font-size: 2rem;
+    margin-bottom: -80px;
   }
+
+  @media (min-width: 992px) {
+    margin-bottom: -80px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 3rem;
+    margin-bottom: -50px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 3.5rem;
+  }
+  
 `
 
 const ProjectsContainer = styled.div`
@@ -37,6 +52,11 @@ const ProjectsContainer = styled.div`
   @media (min-width: 768px) {
     flex-direction: row;
     margin-top: 100px;
+    width: 100%;
+  }
+
+  @media (min-width: 992px) {
+    width: 90%;
   }
 `
 

@@ -15,6 +15,26 @@ const ProjectsItemContainer = styled.a`
   &:hover{
     transform: scale(1.1)
   }
+
+  @media (min-width: 768px) {
+    width: 200px;
+    height: 150px;
+  }
+
+  @media (min-width: 992px) {
+    width: 250px;
+    height: 200px;
+  }
+
+  @media (min-width: 1400px) {
+    width: 300px;
+    height: 250px;
+  }
+
+  @media (min-width: 1600px) {
+    width: 350px;
+    height: 300px;
+  }
 `
 
 const ProjectDescription = styled.div`
@@ -29,7 +49,7 @@ const ProjectDescription = styled.div`
   border-radius: 20px;
   opacity: 0;
   transition: 0.3s;
-  outline: 1px solid #FE5A01;
+  outline: 2px solid #FE5A01;
   padding: 15px;
   text-align: center;
   color:#242021;
@@ -58,6 +78,30 @@ const Block = styled.div`
   height: 60px;
   color: white;
   border-radius: 10px;
+
+  @media (min-width: 768px) {
+    top: -40px;
+    left: 160px;
+  }
+
+  @media (min-width: 992px) {
+    top: -40px;
+    left: 210px;
+  }
+
+  @media (min-width: 1400px) {
+    top: -40px;
+    left: 260px;
+    width: 70px;
+    height: 70px;
+  }
+
+  @media (min-width: 1600px) {
+    top: -50px;
+    left: 300px;
+    width: 80px;
+    height: 80px;
+  }
 `
 
 const Title = styled.div`
@@ -65,10 +109,15 @@ const Title = styled.div`
   color: #242021;
   top: -45px;
   left: 10px;
-  width: 60px;
+  width: fit-content;
   height: 60px;
   font-weight: 600;
+
+  @media (min-width: 1400px) {
+    font-size: 1.5rem;
+  }
 `
+
 
 
 function ProjectsItem(props) {

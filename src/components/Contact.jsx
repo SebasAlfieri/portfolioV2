@@ -74,6 +74,8 @@ const ContactBox = styled.div`
   &:active{
     color: #c7c7c7;
     background-color: #322d2e;
+    transform: scale(1.05)
+    
   }
 
   @media (min-width: 768px) {
@@ -98,6 +100,7 @@ const ContactBoxAnchor = styled.a`
   &:active{
     color: #c7c7c7;
     background-color: #322d2e;
+    transform: scale(1.05)
   }
 
   @media (min-width: 768px) {

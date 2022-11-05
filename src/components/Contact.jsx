@@ -1,11 +1,11 @@
-import React, { useState }  from 'react'
-import { IoLogoWhatsapp } from 'react-icons/io';
-import { IoMdMail } from 'react-icons/io';
-import styled from "styled-components"
+import React, { useState } from "react";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { IoMdMail } from "react-icons/io";
+import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const ContactMainContainer = styled.div`
-  color:#242021;
+  color: #242021;
   font-size: 1.5rem;
   margin: auto;
   height: fit-content;
@@ -14,7 +14,7 @@ const ContactMainContainer = styled.div`
   @media (min-width: 768px) {
     margin-top: 0;
   }
-`
+`;
 
 const ContactTitle = styled.h2`
   display: flex;
@@ -26,13 +26,13 @@ const ContactTitle = styled.h2`
     justify-content: flex-start;
     margin-left: 50px;
   }
-`
+`;
 
 const ContactContainer = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color:#ffffff;
+  color: #ffffff;
   width: 200px;
   height: 100px;
   margin: auto;
@@ -43,7 +43,7 @@ const ContactContainer = styled.div`
     width: 400px;
     height: 200px;
   }
-`
+`;
 
 const ContactBoxContainer = styled.div`
   width: 100%;
@@ -58,7 +58,7 @@ const ContactBoxContainer = styled.div`
     width: 700px;
     margin-top: 10px;
   }
-`
+`;
 
 const ContactBox = styled.div`
   display: flex;
@@ -71,11 +71,10 @@ const ContactBox = styled.div`
   background-color: #242021;
   border-radius: 25px;
 
-  &:active{
+  &:active {
     color: #c7c7c7;
     background-color: #322d2e;
-    transform: scale(1.05)
-    
+    transform: scale(1.05);
   }
 
   @media (min-width: 768px) {
@@ -83,24 +82,24 @@ const ContactBox = styled.div`
     height: 150px;
     font-size: 7rem;
   }
-`
+`;
 
 const ContactBoxAnchor = styled.a`
-  display: flex;  
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100px;
   height: 100px;
   font-size: 4rem;
   transition: 0.1s;
-  color:#ffffff;
+  color: #ffffff;
   background-color: #242021;
   border-radius: 25px;
 
-  &:active{
+  &:active {
     color: #c7c7c7;
     background-color: #322d2e;
-    transform: scale(1.05)
+    transform: scale(1.05);
   }
 
   @media (min-width: 768px) {
@@ -108,7 +107,7 @@ const ContactBoxAnchor = styled.a`
     height: 150px;
     font-size: 7rem;
   }
-`
+`;
 
 const HoverContainer = styled.div`
   position: relative;
@@ -125,7 +124,7 @@ const HoverContainer = styled.div`
   @media (min-width: 768px) {
     width: 400px;
   }
-`
+`;
 
 const ClickContainer = styled.div`
   position: relative;
@@ -142,22 +141,18 @@ const ClickContainer = styled.div`
   animation-name: fadeOut;
   animation-iteration-count: infinite;
 
-
   @media (min-width: 768px) {
     width: 400px;
     top: 50px;
     font-size: 1rem;
   }
-`
+`;
 
 const PopupsContainer = styled.div`
   height: 30px;
-`
-
-
+`;
 
 function Contact() {
-
   const [isHovering, setIsHovering] = useState(false);
   const [clicked, setClicked] = useState(false);
 
@@ -171,37 +166,50 @@ function Contact() {
 
   const handleClick = () => {
     setClicked(true);
-    navigator.clipboard.writeText("sebasalfieri@gmail.com")
+    navigator.clipboard.writeText("sebasalfieri@gmail.com");
   };
 
   return (
     <ContactMainContainer>
-      <ContactTitle id='contact'>Contact me</ContactTitle>
+      <ContactTitle id="contact">Contact me</ContactTitle>
       <PopupsContainer>
-        {clicked && <ClickContainer>Copied "sebasalfieri@gmail.com" to clipboard!</ClickContainer>}
+        {clicked && (
+          <ClickContainer>
+            Copied "sebasalfieri@gmail.com" to clipboard!
+          </ClickContainer>
+        )}
       </PopupsContainer>
       <PopupsContainer>
-        {isHovering && <HoverContainer>Click to copy e-mail to clipboard</HoverContainer>}
+        {isHovering && (
+          <HoverContainer>Click to copy e-mail to clipboard</HoverContainer>
+        )}
       </PopupsContainer>
-      <ContactContainer 
+      <ContactContainer
         as={motion.div}
-        initial={{ opacity: 0 }}         
+        initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition= {{delay: 0.3}}>
+        transition={{ delay: 0.3 }}
+      >
         <ContactBoxContainer>
-          <ContactBox onClick={handleClick}
+          <ContactBox
+            onClick={handleClick}
             as={motion.div}
-            whileHover={{scale: 1.05}}>
-            <IoMdMail/>
+            whileHover={{ scale: 1.05 }}
+          >
+            <IoMdMail />
           </ContactBox>
           <ContactBoxAnchor
             as={motion.a}
-            whileHover={{scale: 1.05}}
-            href={"https://wa.me/5491122251843"} target="_blank"><IoLogoWhatsapp/></ContactBoxAnchor>
+            whileHover={{ scale: 1.05 }}
+            href={"https://wa.me/5491122251843"}
+            target="_blank"
+          >
+            <IoLogoWhatsapp />
+          </ContactBoxAnchor>
         </ContactBoxContainer>
       </ContactContainer>
     </ContactMainContainer>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

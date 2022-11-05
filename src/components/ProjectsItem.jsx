@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 import { addScaleCorrector, motion } from "framer-motion";
 
 const ProjectsItemContainer = styled.a`
@@ -8,13 +8,13 @@ const ProjectsItemContainer = styled.a`
   height: 200px;
   background-color: #5b52df;
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: center;
   background-size: cover;
   transition: 0.2s;
   text-decoration: none;
 
-  &:hover{
-    transform: scale(1.1)
+  &:hover {
+    transform: scale(1.1);
   }
 
   @media (min-width: 768px) {
@@ -36,7 +36,7 @@ const ProjectsItemContainer = styled.a`
     width: 350px;
     height: 300px;
   }
-`
+`;
 
 const ProjectDescription = styled.div`
   position: relative;
@@ -50,21 +50,21 @@ const ProjectDescription = styled.div`
   border-radius: 20px;
   opacity: 0;
   transition: 0.3s;
-  outline: 2px solid #FE5A01;
+  outline: 2px solid #fe5a01;
   padding: 15px;
   text-align: center;
-  color:#242021;
+  color: #242021;
 
-  &:hover{
+  &:hover {
     opacity: 1;
   }
-`
+`;
 
 const DescriptionUses = styled.p`
   margin-top: 10px;
-  color: #FE5A01;
+  color: #fe5a01;
   font-weight: 600;
-`
+`;
 
 const Block = styled.div`
   background-color: #242021;
@@ -103,7 +103,7 @@ const Block = styled.div`
     width: 80px;
     height: 80px;
   }
-`
+`;
 
 const Title = styled.div`
   position: relative;
@@ -117,22 +117,22 @@ const Title = styled.div`
   @media (min-width: 1400px) {
     font-size: 1.5rem;
   }
-`
-
-
+`;
 
 function ProjectsItem(props) {
-
-  let { img, title, uses, link, description, lenguages } = props
+  let { img, title, uses, link, description, lenguages } = props;
 
   return (
-    <ProjectsItemContainer      
+    <ProjectsItemContainer
       as={motion.a}
-      initial={{ opacity: 0 }}         
+      initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition= {{delay: 0.3}}
-      whileHover={{scale: 1.05}}
-     href={link} target="_blank" style={{backgroundImage: `url("${img}")`}}>
+      transition={{ delay: 0.3 }}
+      whileHover={{ scale: 1.05 }}
+      href={link}
+      target="_blank"
+      style={{ backgroundImage: `url("${img}")` }}
+    >
       <ProjectDescription>
         {description}
         <DescriptionUses>{lenguages}</DescriptionUses>
@@ -140,7 +140,7 @@ function ProjectsItem(props) {
       <Block>{uses}</Block>
       <Title>{title}</Title>
     </ProjectsItemContainer>
-  )
+  );
 }
 
-export default ProjectsItem
+export default ProjectsItem;

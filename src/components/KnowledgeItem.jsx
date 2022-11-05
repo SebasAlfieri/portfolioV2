@@ -18,14 +18,12 @@ const Container = styled.div`
 `;
 
 function KnowledgeItem(props) {
-
   let { title, background, color } = props;
 
   const item = {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: -1000 },
   };
-
 
   return (
     <Container

@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
-import styled from "styled-components"
-import { IoIosArrowDown } from 'react-icons/io';
-
-
+import React, { useState } from "react";
+import styled from "styled-components";
+import { IoIosArrowDown } from "react-icons/io";
 
 const IndicatorV = styled.div`
   display: flex;
@@ -13,28 +11,26 @@ const IndicatorV = styled.div`
   height: 50px;
   text-align: center;
   transition: 0.3s;
-`
+`;
 
 function Indicator() {
-
   const [scroll, setScroll] = useState(false);
-  const changeClass=()=>{
-    const scrollValue=document.documentElement.scrollTop;
-    if(scrollValue>50)
-    {
+  const changeClass = () => {
+    const scrollValue = document.documentElement.scrollTop;
+    if (scrollValue > 50) {
       setScroll(true);
-    }
-    else{
+    } else {
       setScroll(false);
     }
-  }
+  };
 
-  
-  window.addEventListener('scroll', changeClass);
+  window.addEventListener("scroll", changeClass);
 
   return (
-    <IndicatorV><IoIosArrowDown className={scroll ?"none":"indicator"}/></IndicatorV>
-  )
+    <IndicatorV>
+      <IoIosArrowDown className={scroll ? "none" : "indicator"} />
+    </IndicatorV>
+  );
 }
 
-export default Indicator
+export default Indicator;

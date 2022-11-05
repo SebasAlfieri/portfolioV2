@@ -18,7 +18,7 @@ const HeaderMainContainer = styled.div`
 `;
 
 const HeaderItemsContainer = styled.div`
-  height: 750px;
+  height: 650px;
 
   @media (min-width: 768px) {
     height: 425px;
@@ -163,7 +163,6 @@ const HeaderImgContainer = styled.img`
 `;
 
 function Header() {
-
   const subtitle = {
     visible: {
       x: [-1000, 0],
@@ -233,7 +232,7 @@ function Header() {
             animate={{ opacity: 1 }}
             transition={{ delay: 2.8 }}
           >
-            Im a junior programer highly motivated to create and grow.
+            Im a junior developer highly motivated to create and grow.
           </HeaderSubtitle>
           <HeaderContact
             href="#contact"
@@ -248,20 +247,12 @@ function Header() {
         <HeaderKnowledges
           as={motion.div}
           initial="hidden"
-          animate="visible"  
+          animate="visible"
           variants={list}
-          transition={{delay: 2}}
+          transition={{ delay: 2 }}
         >
-          <KnowledgeItem
-            title="HTML"
-            background="#FC8E3F" 
-            color="black"
-          />
-          <KnowledgeItem
-            title="CSS"
-            background="#FE5A01"
-            color="white"
-          />
+          <KnowledgeItem title="HTML" background="#FC8E3F" color="black" />
+          <KnowledgeItem title="CSS" background="#FE5A01" color="white" />
           <KnowledgeItem
             title="JavaScript"
             background="#222021"

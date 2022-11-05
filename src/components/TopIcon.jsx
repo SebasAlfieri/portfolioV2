@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import styled from "styled-components"
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const TopIconContainer = styled.div`
   display: flex;
@@ -10,40 +10,39 @@ const TopIconContainer = styled.div`
   height: 50px;
   margin-bottom: -50px;
   margin-top: 10px;
-`
+`;
 
 const TopIconImg = styled.img`
   height: 50px;
-`
+`;
 
 const TopIconImgA = styled.a`
   height: 50px;
-`
-
+`;
 
 function TopIcon() {
-
   const [scroll, setScroll] = useState(false);
-  const changeClass=()=>{
-    const scrollValue=document.documentElement.scrollTop;
-    if(scrollValue>300)
-    {
+  const changeClass = () => {
+    const scrollValue = document.documentElement.scrollTop;
+    if (scrollValue > 300) {
       setScroll(true);
-    }
-    else{
+    } else {
       setScroll(false);
     }
-  }
+  };
 
-  window.addEventListener('scroll', changeClass);
+  window.addEventListener("scroll", changeClass);
 
   return (
     <TopIconContainer>
-      <TopIconImgA href='#header'>
-        <TopIconImg src="./images/icon.png" className={scroll ?"indicator":"none"}/>
+      <TopIconImgA href="#header">
+        <TopIconImg
+          src="./images/icon.png"
+          className={scroll ? "indicator" : "none"}
+        />
       </TopIconImgA>
     </TopIconContainer>
-  )
+  );
 }
 
-export default TopIcon
+export default TopIcon;

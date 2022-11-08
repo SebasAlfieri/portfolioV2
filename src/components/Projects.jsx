@@ -94,7 +94,7 @@ function Projects() {
           descriptionTop="A team freelance job where i worked as a developer for a data analysts team"
           descriptionBot="Some simple widgets using different java script features as Local Storate, API - DOM and JSON"
           lenguagesTop="React Js - Responsive"
-          lenguagesBot="Js - Responsive - APIs - JSON"
+          lenguagesBot="Js - APIs - JSON - Sass - Responsive"
           twoItems={true}
         />
         <ProjectsColumn

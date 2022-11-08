@@ -120,18 +120,18 @@ const Title = styled.div`
 `;
 
 function ProjectsItem(props) {
-  let { img, title, uses, link, description, lenguages } = props;
+  let { img, title, uses, link, description, lenguages, display } = props;
 
   return (
     <ProjectsItemContainer
       as={motion.a}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3 }}
+      transition={{ delay: 0.1, duration:0.1 }}
       whileHover={{ scale: 1.05 }}
       href={link}
       target="_blank"
-      style={{ backgroundImage: `url("${img}")` }}
+      style={{ backgroundImage: `url("${img}")`, display:`${display}` }}
     >
       <ProjectDescription>
         {description}

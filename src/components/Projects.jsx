@@ -74,7 +74,7 @@ function Projects() {
           usesTop="React Js"
           usesBot="Js"
           linkTop="https://watchmealfieri.vercel.app/"
-          linkBot="https://valorant-wheat.vercel.app/"
+          linkBot="https://valorant-ten.vercel.app/"
           descriptionTop="An e-commerce including a functional cart and back-end for products and orders management"
           descriptionBot="One of my first Js approaches. Looks cool!"
           lenguagesTop="React Js - Firebase"

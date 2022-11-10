@@ -83,15 +83,15 @@ function Projects() {
         />
         <ProjectsColumn
           margin="50px"
-          titleTop="Reflejar"
+          titleTop="Reflejar (W.I.P.)"
           titleBot="Widgets"
           imgTop="./images/reflejar.jpg"
           imgBot="./images/widgets.jpg"
-          linkTop="https://reflejar-sebasalfieri.vercel.app/"
+          linkTop="#"
           linkBot="https://sebasalfieri.github.io/Widgets/"
           usesTop="React Js"
           usesBot="Js"
-          descriptionTop="A team freelance job where i worked as a developer for a data analysts team"
+          descriptionTop="A team freelance job where im working as a developer for a data analysts team"
           descriptionBot="Some simple widgets using different java script features as Local Storate, API - DOM and JSON"
           lenguagesTop="React Js - Responsive"
           lenguagesBot="Js - APIs - JSON - Sass - Responsive"

@@ -207,8 +207,7 @@ function Header() {
           <HeaderTitleTop
             as={motion.h1}
             initial={{ opacity: 0 }}
-            animate={{ y: [-1000, 0] }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ y: [-1000, 0], opacity: 1 }}
           >
             My name
           </HeaderTitleTop>

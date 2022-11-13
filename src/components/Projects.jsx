@@ -78,7 +78,7 @@ function Projects() {
           descriptionTop="An e-commerce including a functional cart and back-end for products and orders management"
           descriptionBot="One of my first Js approaches. Looks cool!"
           lenguagesTop="React Js - Firebase"
-          lenguagesBot="Js - DOM - Responsive"
+          lenguagesBot="Js - DOM"
           twoItems={true}
         />
         <ProjectsColumn
@@ -93,8 +93,8 @@ function Projects() {
           usesBot="Js"
           descriptionTop="A team freelance job where im working as a developer for a data analysts team"
           descriptionBot="Some simple widgets using different java script features as Local Storate, API - DOM and JSON"
-          lenguagesTop="React Js - Responsive"
-          lenguagesBot="Js - APIs - JSON - Sass - Responsive"
+          lenguagesTop="React Js"
+          lenguagesBot="Js - APIs - JSON - Sass"
           twoItems={true}
         />
         <ProjectsColumn
@@ -109,8 +109,8 @@ function Projects() {
           usesBot="React Js"
           descriptionTop="A simple drinking game i made to play with friends"
           descriptionBot="A webpage where people post their secrets Anonymously using Firebase as Backend server"
-          lenguagesTop="Js - Responsive"
-          lenguagesBot="React Js - Firebase - Responsive"
+          lenguagesTop="Js"
+          lenguagesBot="React Js - Firebase"
           twoItems={true}
         />
           <ProjectsColumn
@@ -121,7 +121,7 @@ function Projects() {
           linkTop="https://lolalfierii.netlify.app/"
           usesTop="Sass"
           descriptionTop="A League of Legends webpage simulator"
-          lenguagesTop="Sass - Responsive - Bootstrap"
+          lenguagesTop="Sass - Bootstrap"
           twoItems={false}
         />
       </ProjectsContainer>

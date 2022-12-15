@@ -1,28 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: "Chakra Petch", sans-serif;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-.none{
+.none {
   opacity: 0;
   transition: 1s;
 }
 
-.indicator{
+.indicator {
   opacity: 1;
   transition: 1s;
 }
 
 ::-webkit-scrollbar {
-	width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -38,21 +38,20 @@ html{
 }
 
 @media (max-width: 767px) {
-
-  #column{
+  #column {
     margin-top: 0 !important;
     margin-bottom: 100px;
   }
 }
 
 @keyframes fadeOut {
-	0% {
-		transform: scale(1.0);
-	}
+  0% {
+    transform: scale(1);
+  }
   50% {
-		transform: scale(1.05);
-	}
-	100% {
-		transform: scale(1.0);
-	}
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

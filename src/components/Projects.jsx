@@ -83,45 +83,67 @@ function Projects() {
         />
         <ProjectsColumn
           margin="50px"
-          titleTop="Reflejar (W.I.P.)"
-          titleBot="Widgets"
-          imgTop="./images/reflejar.jpg"
-          imgBot="./images/widgets.jpg"
-          linkTop="#"
-          linkBot="https://sebasalfieri.github.io/Widgets/"
+          titleTop="Liteflix"
+          titleBot="Reflejar (W.I.P.)"
+          imgTop="./images/liteflix.jpg"
+          imgBot="./images/reflejar.jpg"
+          linkTop="https://liteflix-challenge-alfieri.vercel.app/"
+          linkBot="#"
           usesTop="React Js"
-          usesBot="Js"
-          descriptionTop="A team freelance job where im working as a developer for a data analysts team"
-          descriptionBot="Some simple widgets using different java script features as Local Storate, API - DOM and JSON"
-          lenguagesTop="React Js"
-          lenguagesBot="Js - APIs - JSON - Sass"
+          usesBot="React Js"
+          descriptionTop="A fancy movies page simulator"
+          descriptionBot="A team freelance job where im working as a developer for a data analysts team"
+          lenguagesTop="Framer Motion - Api - Styled Components"
+          lenguagesBot="React Js"
           twoItems={true}
         />
         <ProjectsColumn
           margin="100px"
-          titleTop="Todito"
+          titleTop="Huggies Freelance"
           titleBot="My Secret"
-          imgTop="./images/todito.jpg"
+          imgTop="./images/huggies.jpg"
           imgBot="./images/mysecret.jpg"
-          linkTop="https://todito.vercel.app/"
+          linkTop="https://mixeatuhumor.withspotify.com/login"
           linkBot="https://my-secret-seven.vercel.app/"
-          usesTop="Js"
+          usesTop="React Js"
           usesBot="React Js"
-          descriptionTop="A simple drinking game i made to play with friends"
+          descriptionTop="A freelacer for Huggies where i worked as front end developer together with a back end developer"
           descriptionBot="A webpage where people post their secrets Anonymously using Firebase as Backend server"
-          lenguagesTop="Js"
+          lenguagesTop="React Js - Next Js"
           lenguagesBot="React Js - Firebase"
           twoItems={true}
         />
           <ProjectsColumn
+          margin="50px"
+          marginBot="-250px"
+          titleTop="Todito"
+          imgTop="./images/todito.jpg"
+          linkTop="https://todito.vercel.app/"
+          usesTop="Js"
+          descriptionTop="A simple drinking game i made to play with friends"
+          lenguagesTop="Js"
+          twoItems={false}
+        />
+                  <ProjectsColumn
           margin="100px"
-          marginBot="-200px"
+          marginBot="-250px"
           titleTop="Game website"
           imgTop="./images/lol.jpg"
           linkTop="https://lolalfierii.netlify.app/"
           usesTop="Sass"
           descriptionTop="A League of Legends webpage simulator"
           lenguagesTop="Sass - Bootstrap"
+          twoItems={false}
+        />
+          <ProjectsColumn
+          margin="150px"
+          marginBot="-250px"
+          titleTop="Widgets"
+          imgTop="./images/widgets.jpg"
+          linkTop="https://sebasalfieri.github.io/Widgets/"
+          usesTop="Js"
+          descriptionTop="Some simple widgets using different java script features as Local Storate, API - DOM and JSON"
+          lenguagesTop="Js - APIs - JSON - Sass"
           twoItems={false}
         />
       </ProjectsContainer>
